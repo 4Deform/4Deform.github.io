@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="soon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4Deform: Neural Surface Deformation for Robust Shape Interpolation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/comparison.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Homepage
+        </a>
+        <!-- <div class="navbar-dropdown">
+          <a class="navbar-item" href="./scannet/index.html">
+            ScanNet
+          </a>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">4Deform: Neural Surface Deformation for Robust Shape Interpolation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymized Authors
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser.png -->
+<section class="here teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" height="100%" src="./static/images/cropped_teaser.svg" alt="4Deform teaser."/>
+      <p>
+        We present <b>4Deform</b>, that takes a sparse temporal sequence of point clouds as input and generates realistic intermediate shapes. Starting from just pairs of point clouds and estimated sparse, noisy correspondences (indicated using colors in the point clouds), our method obtains realistic long-range interpolations, even for shapes with changing topology (e.g., the human-object interaction in the top row), and can generalize the interpolation results to real-world data (Kinect point clouds in the second row). Meanwhile, our method can handle non-isometrically deformed shapes (bottom left)  as well as partial shapes (bottom right).
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ 
+
+
+<!-- video -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Real-world Dataset Upsampling</h2>
+    <h2 class="title is-4"> Backpack Back</h2>
+    <div class="caption"> <span>Training Input <br> Approximated Registration </span> <span>Inferring Input <br> Kinect Point Cloud</span> <span>Our Output <br> Interpolated Mesh </span> <span> Our Output <br> Interpolated Kinect PC</span>  </div>
+    <video controls width="100%" height="100%" src="./static/videos/backpack_1_new.mp4" type="video/mp4" autoplay muted loop playsinline></video> 
+    <video controls width="100%" height="100%" src="./static/videos/backpack_2_new.mp4" type="video/mp4" autoplay muted loop playsinline></video> 
+      
+    <h2 class="title is-4"> Largebox</h2>
+    <div class="caption"> <span>Training Input <br> Approximated Registration </span> <span>Inferring Input <br> Kinect Point Cloud</span> <span>Our Output <br> Interpolated Mesh </span> <span> Our Output <br> Interpolated Kinect PC</span>  </div>
+    <video controls width="100%" height="100%" src="./static/videos/boxlarge_1_new.mp4" type="video/mp4" autoplay muted loop playsinline></video> 
+    <video controls width="100%" height="100%" src="./static/videos/boxlarge_2_new.mp4" type="video/mp4" autoplay muted loop playsinline></video> 
+    
+    <h2 class="title is-4"> Tablesmall Lean</h2>
+    <div class="caption"> <span>Training Input <br> Approximated Registration </span> <span>Inferring Input <br> Kinect Point Cloud</span> <span>Our Output <br> Interpolated Mesh </span> <span> Our Output <br> Interpolated Kinect PC</span>  </div>
+    <video controls width="100%" height="100%" src="./static/videos/tablesmall_2_new.mp4" type="video/mp4" autoplay muted loop playsinline></video> 
+  </div>
+    </section>
+  
+    <hr>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3" style="text-align: center;">Video for Comparison Methods</h2>
+      <div class="caption"> <span>Limp </span> <span>NISE</span> <span>LipMLP</span> <span>Ours</span>  </div>
+      <video controls width="100%" height="100%" src="./static/videos/dress4d_comparison.mp4" type="video/mp4" autoplay muted loop playsinline></video>
+
+    </div>
+    </section>
+
+    <hr>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3" style="text-align: center;">Real-World Mesh Deformation</h2>
+        <div class="caption"> <span>Approximated Registration </span> <span>Our Deformed Mesh</span> <span>Approximated Registration</span> <span>Our Deformed Mesh</span>  </div>
+        <video controls width="100%" height="100%" src="./static/videos/dress4d_video_convert.mp4" type="video/mp4" autoplay muted loop playsinline></video>
+  
+      </div>
+      </section>
+
+<!-- comparison.png -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Visualization of Comparison Results</h2>
+    <div class="image-row-container">
+      <div class="image-row-item">
+      <img  height="90%" src="./static/images/dress4d_crop.svg" alt="4D-Dress comparison."/>
+      <p> Visualization of the comparison method on <b>4D-Dress</b> dataset. </p>
+      </div>
+      <div class="image-row-item">
+      <img  src="./static/images/lion_crop.svg" alt="4D-Dress comparison."/>
+      <p>Visualization of the comparison method on <b>SMAL</b> dataset <b>Lion</b> category deformation.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
