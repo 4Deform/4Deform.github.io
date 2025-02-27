@@ -20,6 +20,9 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script> -->
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -78,7 +81,8 @@
           <h1 class="title is-1 publication-title">4Deform: Neural Surface Deformation for Robust Shape Interpolation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Anonymized Authors
+              Lu Sang<sup>1,2</sup>, Zehranaz Canfes<sup>2</sup>, Dongliang Cao<sup>3</sup>, Riccardo Marin<sup>1,2</sup>, Florian Bernard<sup>3</sup>, Daniel Cremers<sup>1,2</sup>
+              <sup>1</sup>Technical University of Munich, <sup>2</sup>Munich Center of Machine Learning, <sup>3</sup>University of Bonn
             
           </div>
         </div>
@@ -98,6 +102,20 @@
     </div>
   </div>
 </section>
+
+
+<!-- pipleline.png -->
+<section class="here pipeline">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="pipeline" height="100%" src="./static/images/pipeline.png" alt="4Deform pipeline."/>
+      <p>
+        <b>Pipeline of 4Deform</b>: Given a temporal sequence of inputs, we initialize a latent vector to each point cloud. Then the network takes pairs of point clouds \(P_0\) and \(P_1\) (with sparse correspondences), together with the concatenated latent vector \(\mathbf{z}_0\) and \(\mathbf{z}_1\) as input. At training time, we jointly optimize two neural fields: a time-varying implicit representation (Implicit Net \(\phi\)) and a velocity field (Velocity Net \(\mathcal{V}\)) with proposed geometric and physical constraints losses. Conditioning on a time stamp \(t\), we instantaneously obtain a continuous time-varying signed distance function (SDF), an offset of the input toward the target (velocity field).
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
  
